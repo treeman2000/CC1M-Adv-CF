@@ -14,21 +14,10 @@ We generate highly transferable adversarial examples by perturbing inputs in a w
 We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods, as detailed below:
 | model name | paper |
 | --- | --- |
-| Swin-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen,577
-Y. He, H. Xue, and S. Zheng, “A comprehensive study on578
-robustness of image classification models: Benchmarking and579
-rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
-| ConvNeXt-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen,577
-Y. He, H. Xue, and S. Zheng, “A comprehensive study on578
-robustness of image classification models: Benchmarking and579
-rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
-| ViT-B + ConvStem | N. D. Singh, F. Croce, and M. Hein, “Revisiting adversarial586
-training for imagenet: Architectures, training and general-587
-ization across threat models,” in NeurIPS, 2024 |
-| RaWideResNet-101-2 | S. Peng, W. Xu, C. Cornelius, M. Hull, K. Li, R. Duggal, 544
-M. Phute, J. Martin, and D. H. Chau, “Robust principles: 545
-Architectural design principles for adversarially robust cnns,” 546
-arXiv preprint arXiv:2308.16258, 2023. |
+| Swin-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen, Y. He, H. Xue, and S. Zheng, “A comprehensive study on robustness of image classification models: Benchmarking and rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
+| ConvNeXt-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen, Y. He, H. Xue, and S. Zheng, “A comprehensive study on robustness of image classification models: Benchmarking and rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
+| ViT-B + ConvStem | N. D. Singh, F. Croce, and M. Hein, “Revisiting adversarial586 training for imagenet: Architectures, training and generalization across threat models,” in NeurIPS, 2024 |
+| RaWideResNet-101-2 | S. Peng, W. Xu, C. Cornelius, M. Hull, K. Li, R. Duggal, M. Phute, J. Martin, and D. H. Chau, “Robust principles: Architectural design principles for adversarially robust cnns, ”arXiv preprint arXiv:2308.16258, 2023. |
 
 
 ### File Structure
