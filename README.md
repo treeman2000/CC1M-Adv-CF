@@ -1,4 +1,4 @@
-# CC1M-adv-C/F: Datasets for robustness evaluation
+# CC1M-adv-C/F: Two million-scale datasets for adversarial robustness evaluation of vision models (classifiers and feature extractors)
 
 Robustness evaluation is particularly important in the field of AI, especially when deep learning and machine learning models are widely used in real-world tasks. The challenge in this field is that many models may show fragility when facing various uncertainties and perturbations. Robustness evaluation aims to quantify and improve the stability and reliability of the model in different scenarios, so as to ensure that it can cope with unforeseen input changes, adversarial attacks or data bias.
 
@@ -14,10 +14,10 @@ We generate highly transferable adversarial examples by perturbing inputs in a w
 We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods, as detailed below:
 | model name | paper |
 | --- | --- |
-| Swin-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen, Y. He, H. Xue, and S. Zheng, “A comprehensive study on robustness of image classification models: Benchmarking and rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
-| ConvNeXt-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen, Y. He, H. Xue, and S. Zheng, “A comprehensive study on robustness of image classification models: Benchmarking and rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
-| ViT-B + ConvStem | N. D. Singh, F. Croce, and M. Hein, “Revisiting adversarial586 training for imagenet: Architectures, training and generalization across threat models,” in NeurIPS, 2024 |
-| RaWideResNet-101-2 | S. Peng, W. Xu, C. Cornelius, M. Hull, K. Li, R. Duggal, M. Phute, J. Martin, and D. H. Chau, “Robust principles: Architectural design principles for adversarially robust cnns, ”arXiv preprint arXiv:2308.16258, 2023. |
+| Swin-L | A comprehensive study on robustness of image classification models: Benchmarking and rethinking |
+| ConvNeXt-L | A comprehensive study on robustness of image classification models: Benchmarking and rethinking |
+| ViT-B + ConvStem | Revisiting adversarial586 training for imagenet: Architectures, training and generalization across threat models |
+| RaWideResNet-101-2 | Robust principles: Architectural design principles for adversarially robust cnns |
 
 
 ### File Structure
@@ -44,14 +44,14 @@ We generate highly transferable adversarial examples by perturbing in parallel a
 We selected 8 mainstream feature extractors from the timm library for generating adversarial examples, which include various model architectures and pre-training methods, as detailed below:
 | model name | paper |
 | --- | --- |
-| vgg16 | Simonyan K, Zisserman A. Very deep convolutional networks for large-scale image recognition[J]. arXiv preprint arXiv:1409.1556, 2014. |
-| resnet101 | He K, Zhang X, Ren S, et al. Deep residual learning for image recognition[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2016: 770-778. |
-| efficient net | Tan M, Le Q. Efficientnet: Rethinking model scaling for convolutional neural networks[C]//International conference on machine learning. PMLR, 2019: 6105-6114.
-| convnext_base | Liu Z, Mao H, Wu C Y, et al. A convnet for the 2020s[C]//Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2022: 11976-11986. |
-| vit_base_patch16_224 | Dosovitskiy A, Beyer L, Kolesnikov A, et al. An image is worth 16x16 words: Transformers for image recognition at scale[J]. arXiv preprint arXiv:2010.11929, 2020. |
-| vit_base_patch16_224.dino | Caron M, Touvron H, Misra I, et al. Emerging properties in self-supervised vision transformers[C]//Proceedings of the IEEE/CVF international conference on computer vision. 2021: 9650-9660. |
-| beit_base_patch16_224 | Bao H, Dong L, Piao S, et al. Beit: Bert pre-training of image transformers[J]. arXiv preprint arXiv:2106.08254, 2021. |
-| swin_base_patch4_window7_224 | Liu Z, Lin Y, Cao Y, et al. Swin transformer: Hierarchical vision transformer using shifted windows[C]//Proceedings of the IEEE/CVF international conference on computer vision. 2021: 10012-10022. |
+| vgg16 | Very deep convolutional networks for large-scale image recognition|
+| resnet101 | Deep residual learning for image recognition|
+| efficient net | Efficientnet: Rethinking model scaling for convolutional neural networks|
+| convnext_base | A convnet for the 2020s|
+| vit_base_patch16_224 | An image is worth 16x16 words: Transformers for image recognition at scale|
+| vit_base_patch16_224.dino | Emerging properties in self-supervised vision transformers|
+| beit_base_patch16_224 |Beit: Bert pre-training of image transformers|
+| swin_base_patch4_window7_224 | Swin transformer: Hierarchical vision transformer using shifted windows|
 
 
 ### File Structure
@@ -70,3 +70,12 @@ https://huggingface.co/datasets/xingjunm/CC1M-Adv-F
 ### Usage
 This dataset can be used with the code we provide to test the relative robustness of the model.
 Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision/black-box
+
+## Acknowledgements
+Our work is based on the CC3M dataset.
+website: https://ai.google.com/research/ConceptualCaptions/
+paper: https://aclanthology.org/P18-1238/
+github: https://github.com/google-research-datasets/conceptual-captions
+
+## Cite Us
+If you find our datasets interesting and helpful, please consider citing us in your research or publications:
