@@ -9,6 +9,45 @@ Considering the importance of robustness, we need a method to conveniently evalu
 </p>
 
 ## CC1M-adv-C
+### Dataset Description
+We generate highly transferable adversarial examples by perturbing inputs in a way that affects multiple classification models simultaneously.
+We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods, as detailed below:
+| model name | paper |
+| --- | --- |
+| Swin-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen,577
+Y. He, H. Xue, and S. Zheng, “A comprehensive study on578
+robustness of image classification models: Benchmarking and579
+rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
+| ConvNeXt-L | C. Liu, Y. Dong, W. Xiang, X. Yang, H. Su, J. Zhu, Y. Chen,577
+Y. He, H. Xue, and S. Zheng, “A comprehensive study on578
+robustness of image classification models: Benchmarking and579
+rethinking,” arXiv preprint arXiv:2302.14301, 2023. |
+| ViT-B + ConvStem | N. D. Singh, F. Croce, and M. Hein, “Revisiting adversarial586
+training for imagenet: Architectures, training and general-587
+ization across threat models,” in NeurIPS, 2024 |
+| RaWideResNet-101-2 | S. Peng, W. Xu, C. Cornelius, M. Hull, K. Li, R. Duggal, 544
+M. Phute, J. Martin, and D. H. Chau, “Robust principles: 545
+Architectural design principles for adversarially robust cnns,” 546
+arXiv preprint arXiv:2308.16258, 2023. |
+
+
+### File Structure
+
+```
+cc1m
+    |--000000000.jpg
+    |--000000001.jpg
+    |--000000002.jpg
+    ...
+```
+
+### Download
+https://huggingface.co/datasets/xingjunm/CC1M-Adv-C
+
+### Usage
+This dataset can be used with the code we provide to test the relative robustness of the model.
+Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision/white-box
+
 
 ## CC1M-adv-F
 ### Dataset Description
