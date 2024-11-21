@@ -11,7 +11,7 @@ Considering the importance of robustness, we need a method to conveniently evalu
 ## CC1M-adv-C
 ### Dataset Description
 We generate highly transferable adversarial examples by perturbing inputs in a way that affects multiple classification models simultaneously.
-We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods, as detailed below:
+We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods. The following table shows the models we used.
 | model name | paper |
 | --- | --- |
 | Swin-L | A comprehensive study on robustness of image classification models: Benchmarking and rethinking |
@@ -41,7 +41,7 @@ Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiad
 ## CC1M-adv-F
 ### Dataset Description
 We generate highly transferable adversarial examples by perturbing in parallel at the feature layer using multiple pre-trained image encoders.
-We selected 8 mainstream feature extractors from the timm library for generating adversarial examples, which include various model architectures and pre-training methods, as detailed below:
+We selected 8 mainstream feature extractors from the timm library for generating adversarial examples, which include various model architectures and pre-training methods. The following table shows the models we used.
 | model name | paper |
 | --- | --- |
 | vgg16 | Very deep convolutional networks for large-scale image recognition|
