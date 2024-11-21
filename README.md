@@ -1,14 +1,14 @@
-# CC1M-adv-C/F: Two million-scale datasets for adversarial robustness evaluation of vision models (classifiers and feature extractors)
+# CC1M-Adv-C/F: Two million-scale datasets for adversarial robustness evaluation of vision models (classifiers and feature extractors)
 
 Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created CC1M-Adv-C and CC1M-Adv-F using the following methods:
 - Probability Margin Attack (PMA), which introduces a probability margin loss to boost attack effectiveness of individual attacks.
 - 
 
 <p align="center">
-<img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-adv" title="CC1M-adv" align="center"></img>
+<img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
 </p>
 
-## CC1M-adv-C
+## CC1M-Adv-C
 ### Dataset Description
 We focus on image classification models and propose a novel individual attack method, Probability Margin Attack (PMA), which defines the adversarial margin in the probability space rather than the logits space. We generate highly transferable adversarial examples by perturbing inputs in PMA, thereby affecting multiple classification models simultaneously.  
 We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods. The following table shows the models we used.
@@ -38,7 +38,7 @@ This dataset can be used with the code we provide to test the relative robustnes
 Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision/white-box
 
 
-## CC1M-adv-F
+## CC1M-Adv-F
 ### Dataset Description
 We generate highly transferable adversarial examples by perturbing in parallel at the feature layer using multiple pre-trained image encoders.
 We selected 8 mainstream feature extractors from the timm library for generating adversarial examples, which include various model architectures and pre-training methods. The following table shows the models we used.
