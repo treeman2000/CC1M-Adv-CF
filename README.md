@@ -1,9 +1,18 @@
-# CC1M-Adv-C/F: Two million-scale datasets for adversarial robustness evaluation of vision models (classifiers and feature extractors)
+# CC1M-Adv-C/F: Towards million-scale adversarial robustness evaluation 
 
-Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created CC1M-Adv-C and CC1M-Adv-F using the following methods:
-- Probability Margin Attack (PMA), which introduces a probability margin loss to boost attack effectiveness of individual attacks.
-- 
+Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created two adversarial version of CC1M: **CC1M-Adv-C** and **CC1M-Adv-F**, using the following methods:
 
+- **Probability Margin Attack (PMA)**[1], our newly proposed attack method for image classification models that is based on a probability margin loss.
+  
+- xxxxx
+  
+- **Improved Transferability**: we improve the transferability by proposing a **Surrogate Ensemble** technique, generating based on an ensemble (eight) of surroagte models.
+
+- **CC1M-Adv-C** is for testing image classification models, while **CC1M-Adv-F** is for non-classification models.
+
+- Example evaluations can be found at our Vision Safety Platform: xxxx.
+
+  
 <p align="center">
 <img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
 </p>
