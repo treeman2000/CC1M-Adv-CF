@@ -1,4 +1,4 @@
-# CC1M-Adv-C/F: Towards million-scale adversarial robustness evaluation 
+# CC1M-Adv-C/F: Datasets for Million-Scale Adversarial Robustness Evaluation
 
 Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created two adversarial version of CC1M: **CC1M-Adv-C** and **CC1M-Adv-F**, using the following methods:
 
