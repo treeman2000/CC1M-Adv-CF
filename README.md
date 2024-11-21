@@ -1,8 +1,8 @@
 # CC1M-adv-C/F: Two million-scale datasets for adversarial robustness evaluation of vision models (classifiers and feature extractors)
 
-Robustness evaluation is particularly important in the field of AI, especially when deep learning and machine learning models are widely used in real-world tasks. The challenge in this field is that many models may show fragility when facing various uncertainties and perturbations. Robustness evaluation aims to quantify and improve the stability and reliability of the model in different scenarios, so as to ensure that it can cope with unforeseen input changes, adversarial attacks or data bias.
-
-Considering the importance of robustness, we need a method to conveniently evaluate the robustness of the model. To this end, we selected one million images from the CC3M dataset to form the initial CC1M dataset. Based on this, we constructed two robustness evaluation datasets, which were generated based on different methods, one based on the classification head, called CC1M-adv-C, and the other based on the feature, called CC1M-adv-F. We provide supporting code to facilitate testing of the model.
+Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created CC1M-Adv-C and CC1M-Adv-F using the following methods:
+- Probability Margin Attack (PMA), which introduces a probability margin loss to boost attack effectiveness of individual attacks.
+- 
 
 <p align="center">
 <img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-adv" title="CC1M-adv" align="center"></img>
@@ -10,7 +10,7 @@ Considering the importance of robustness, we need a method to conveniently evalu
 
 ## CC1M-adv-C
 ### Dataset Description
-We generate highly transferable adversarial examples by perturbing inputs in a way that affects multiple classification models simultaneously.
+We focus on image classification models and propose a novel individual attack method, Probability Margin Attack (PMA), which defines the adversarial margin in the probability space rather than the logits space. We generate highly transferable adversarial examples by perturbing inputs in PMA, thereby affecting multiple classification models simultaneously.  
 We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods. The following table shows the models we used.
 | model name | paper |
 | --- | --- |
