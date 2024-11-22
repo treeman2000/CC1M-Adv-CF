@@ -1,8 +1,8 @@
 # CC1M-Adv-C/F: Two Million-Scale Datasets for Adversarial Robustness Evaluation
 
-Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on CC3M, by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created two adversarial version of CC1M: **CC1M-Adv-C** and **CC1M-Adv-F**, using the following methods:
+Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on **CC3M**[1], by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created two adversarial version of CC1M: **CC1M-Adv-C** and **CC1M-Adv-F**, using the following methods:
 
-- **Probability Margin Attack (PMA)**[1], our newly proposed attack method for image classification models that is based on a probability margin loss.
+- **Probability Margin Attack (PMA)**[2], our newly proposed attack method for image classification models that is based on a probability margin loss.
   
 - xxxxx
   
@@ -17,11 +17,25 @@ Current evaluations of adversarial robustness for vision models are mostly small
 <img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
 </p>
 
+## CC1M
+### Dataset Description
+CC1M is a large-scale evaluation dataset containing 1 million images selected from the CC3M, which consists of image-caption pairs featuring diverse objects, scenes, and visual concepts. To construct CC1M, we first removed unavailable images, such as those displaying “this image is unavailable” due to expired URLs. Next, we filtered out noisy images that lack meaningful semantic content, such as random icons. To further refine the dataset, we applied the Local Intrinsic Dimensionality (LID) metric, known for detecting adversarial images, backdoor images, and low-quality data that may harm self-supervised contrastive learning. By calculating LID scores based on CLIP embeddings, we identified outliers using the Median Absolute Deviation (MAD) method, retaining images with LID scores close to the median. This process ensures that the final CC1M dataset maintains high-quality, diverse content suitable for robust evaluation tasks.
+
+### File Structure
+```
+cc1m
+    |--000000000.jpg
+    |--000000001.jpg
+    |--000000002.jpg
+    ...
+```
+
+
 ## CC1M-Adv-C
 ### Dataset Description
-We focus on image classification models and propose a novel individual attack method, Probability Margin Attack (PMA), which defines the adversarial margin in the probability space rather than the logits space. We generate highly transferable adversarial examples by perturbing inputs in PMA, thereby affecting multiple classification models simultaneously.  
-We selected 4 mainstream adversarially trained models from the RobustBench library for generating adversarial examples, which include various architectures and defence methods. The following table shows the models we used.
-| model name | paper |
+We focus on image classification models and introduce a novel attack method called **Probability Margin Attack (PMA)**, which defines the adversarial margin in the probability space instead of the logits space. Using PMA, we generate highly transferable adversarial examples, termed CC1M-Adv-C, by perturbing noise to simultaneously affect multiple classification models. To create these adversarial examples, we employed four surrogate models from the RobustBench library, encompassing various architectures and defense strategies. The table below provides an overview of the models used.
+
+| Surrogate model | paper |
 | --- | --- |
 | Swin-L | A comprehensive study on robustness of image classification models: Benchmarking and rethinking |
 | ConvNeXt-L | A comprehensive study on robustness of image classification models: Benchmarking and rethinking |
@@ -32,7 +46,7 @@ We selected 4 mainstream adversarially trained models from the RobustBench libra
 ### File Structure
 
 ```
-cc1m
+cc1m_adv_c
     |--000000000.jpg
     |--000000001.jpg
     |--000000002.jpg
@@ -66,7 +80,7 @@ We selected 8 mainstream feature extractors from the timm library for generating
 ### File Structure
 
 ```
-cc1m
+cc1m_adv_f
     |--000000000.jpg
     |--000000001.jpg
     |--000000002.jpg
