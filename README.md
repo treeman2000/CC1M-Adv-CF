@@ -12,9 +12,10 @@ Current evaluations of adversarial robustness for vision models are mostly small
 
 - **CC1M-Adv-C** is for testing image classification models, while **CC1M-Adv-F** is for non-classification models.
 
-- Example evaluations can be found at our Vision Safety Platform: xxxx.
+- Example evaluations can be found at our Vision Safety Platform: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision.
 
-
+<br>
+<br>
 
 ## CC1M
 ### Dataset Description
@@ -59,6 +60,8 @@ https://huggingface.co/datasets/xingjunm/CC1M-Adv-C
 This dataset can be used with the code we provide to test the relative robustness of the model.
 Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision/white-box
 
+<br>
+<br>
 
 ## CC1M-Adv-F
 ### Dataset Description
