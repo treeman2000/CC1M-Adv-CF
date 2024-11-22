@@ -1,21 +1,20 @@
 # CC1M-Adv-C/F: Two Million-Scale Datasets for Adversarial Robustness Evaluation
+  
+<p align="center">
+<img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
+</p>
 
 Current evaluations of adversarial robustness for vision models are mostly small-scale, often based on subsets of CIFAR-10 or ImageNet. We believe that large-scale (million-scale) assessments are crucial for advancing the field. To facilitate large-scale adversarial robustness testing for vision models, we have constructed a dataset called CC1M based on **CC3M**[1], by removing outlier images (based on the LID metric) and sampling one million images. Subsequently, based on CC1M, we have created two adversarial version of CC1M: **CC1M-Adv-C** and **CC1M-Adv-F**, using the following methods:
 
 - **Probability Margin Attack (PMA)**[2], our newly proposed attack method for image classification models that is based on a probability margin loss.
-  
-- xxxxx
-  
+
 - **Improved Transferability**: we improve the transferability by proposing a **Surrogate Ensemble** technique, generating based on an ensemble (eight) of surroagte models.
 
 - **CC1M-Adv-C** is for testing image classification models, while **CC1M-Adv-F** is for non-classification models.
 
 - Example evaluations can be found at our Vision Safety Platform: xxxx.
 
-  
-<p align="center">
-<img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
-</p>
+
 
 ## CC1M
 ### Dataset Description
@@ -93,12 +92,14 @@ https://huggingface.co/datasets/xingjunm/CC1M-Adv-F
 ### Usage
 This dataset can be used with the code we provide to test the relative robustness of the model.
 Our robustness evaluation code can be found at: https://github.com/OpenTAI/taiadv/blob/main/taiadv/vision/black-box
-
+<br>
+<br>
 ## Acknowledgements
 Our work is based on the CC3M dataset.
 website: https://ai.google.com/research/ConceptualCaptions/
 paper: https://aclanthology.org/P18-1238/
 github: https://github.com/google-research-datasets/conceptual-captions
-
+<br>
+<br>
 ## Cite Us
 If you find our datasets interesting and helpful, please consider citing us in your research or publications:
