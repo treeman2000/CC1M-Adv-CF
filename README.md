@@ -1,4 +1,4 @@
-# CC1M-Adv-C/F: Two Million-Scale Datasets for Adversarial Robustness Evaluation
+# CC1M-Adv-C/F: Million-Scale Datasets for Adversarial Robustness Evaluation
   
 <p align="center">
 <img src="./cc1m.jpg"  width="480px" height="290px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
