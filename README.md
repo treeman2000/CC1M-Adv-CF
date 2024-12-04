@@ -1,7 +1,7 @@
 # CC1M-Adv-C/F: Million-Scale Datasets for Adversarial Robustness Evaluation of Vision Models
   
 <p align="center">
-<img src="./cc1m.jpg"  width="720" height="435px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
+<img src="./cc1m-adv-cf.jpg"  width="720" height="435px" alt="CC1M-Adv" title="CC1M-Adv" align="center"></img>
 </p>
 
 ## 📌 Dataset Description
